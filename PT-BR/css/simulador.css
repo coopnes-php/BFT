@@ -1,0 +1,16 @@
+#outerdiv
+{
+width:930px;
+height:490px;
+overflow:hidden;
+position:relative;
+}
+
+#inneriframe
+{
+position:absolute;
+top:-5px;
+left:-5px;
+width:1580px;
+height:1300px;
+}

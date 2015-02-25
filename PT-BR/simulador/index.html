@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://www.moncherrytapetes.com.br/simulador -->
+<html xml:lang="pt-br" lang="pt-br" slick-uniqueid="3">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="stylesheet" href="./css/master-459e2e8f09af388e04e55be915872cb9.css" type="text/css">
+  <link rel="stylesheet" href="./css/960fixed.css" type="text/css">
+  <link rel="stylesheet" href="./css/gantry-custom.css" type="text/css">
+
+  <script type="text/javascript" async="" src="./js/ga.js"></script>
+  <script src="./js/mootools-core.js" type="text/javascript"></script>
+  <script src="./js/core.js" type="text/javascript"></script>
+  <script src="./js/caption.js" type="text/javascript"></script>
+  <script src="./js/mootools-more.js" type="text/javascript"></script>
+  <script src="./js/browser-engines.js" type="text/javascript"></script>
+ 
+<script type="text/javascript">
+	window.addEvent('domready', function() {
+		$('TapeteFundoSeletorColorWheel').addEvent('mouseover', function() {
+			$('TapeteFundoSeletorList').addClass("open");
+			if ($('tipo_borda_vulcanizada').checked) {
+				var _TapeteBordaSeletorList = $('TapeteBordaSeletorList').get('class');
+				if (_TapeteBordaSeletorList.search(/open/) != -1) {
+					$('TapeteBordaSeletorList').removeClass("open");
+				}
+			} else if ($('tipo_borda_flex').checked) {
+				$('TapeteBordaFlexSeletorList').addClass("open");
+				var _TapeteBordaFlexSeletorList = $('TapeteBordaFlexSeletorList').get('class');
+				if (_TapeteBordaFlexSeletorList.search(/open/) != -1) {
+					$('TapeteBordaFlexSeletorList').removeClass("open");
+				}
+			}
+			var _LogotipoCorSeletorList = $('LogotipoCorSeletorList').get('class');
+			if (_LogotipoCorSeletorList.search(/open/) != -1) {
+				$('LogotipoCorSeletorList').removeClass("open");
+			}
+		});
+		$('TapeteFundoSeletorList').addEvent('mouseleave', function() {
+			$('TapeteFundoSeletorList').removeClass("open");
+		});
+
+		$('TapeteBordaSeletorColorWheel').addEvent('mouseover', function() {
+			if ($('tipo_borda_vulcanizada').checked) {
+				$('TapeteBordaSeletorList').addClass("open");
+			} else if ($('tipo_borda_flex').checked) {
+				$('TapeteBordaFlexSeletorList').addClass("open");
+			}
+			var _TapeteFundoSeletorList = $('TapeteFundoSeletorList').get('class');
+			if (_TapeteFundoSeletorList.search(/open/) != -1) {
+				$('TapeteFundoSeletorList').removeClass("open");
+			}
+
+			var _LogotipoCorSeletorList = $('LogotipoCorSeletorList').get('class');
+			if (_LogotipoCorSeletorList.search(/open/) != -1) {
+				$('LogotipoCorSeletorList').removeClass("open");
+			}
+		});
+		$('TapeteBordaSeletorList').addEvent('mouseleave', function() {
+			$('TapeteBordaSeletorList').removeClass("open");
+		});
+		$('TapeteBordaFlexSeletorList').addEvent('mouseleave', function() {
+			$('TapeteBordaFlexSeletorList').removeClass("open");
+		});
+
+		$('LogotipoCorSeletorColorWheel').addEvent('mouseover', function() {
+			$('LogotipoCorSeletorList').addClass("open");
+			var _TapeteFundoSeletorList = $('TapeteFundoSeletorList').get('class');
+			if (_TapeteFundoSeletorList.search(/open/) != -1) {
+				$('TapeteFundoSeletorList').removeClass("open");
+			}
+			if ($('tipo_borda_vulcanizada').checked) {
+				var _TapeteBordaSeletorList = $('TapeteBordaSeletorList').get('class');
+				if (_TapeteBordaSeletorList.search(/open/) != -1) {
+					$('TapeteBordaSeletorList').removeClass("open");
+				}
+			} else if ($('tipo_borda_flex').checked) {
+				$('TapeteBordaFlexSeletorList').addClass("open");
+				var _TapeteBordaFlexSeletorList = $('TapeteBordaFlexSeletorList').get('class');
+				if (_TapeteBordaFlexSeletorList.search(/open/) != -1) {
+					$('TapeteBordaFlexSeletorList').removeClass("open");
+				}
+			}
+		});
+		$('LogotipoCorSeletorList').addEvent('mouseleave', function() {
+			$('LogotipoCorSeletorList').removeClass("open");
+		});
+
+		$('largura').addEvent('keyup', function() {
+			$('soma').value = calc();
+		});
+		$('comprimento').addEvent('keyup', function() {
+			$('soma').value = calc();
+		});
+		$('m_logotipo_edit_logo_f').addEvent('keyup', function() {
+			$('m_logotipo_f').set('text', this.value);
+		});
+		$('m_logotipo_edit_logo_f').addEvent('blur', function() {
+			$('m_logotipo_edit_logo').addClass('hidden');
+			if (this.value == '') {
+				$('m_logotipo_f').set('text', 'Logotipo');
+				this.value = 'Logotipo';
+			}
+		});
+
+		$('m_logotipo_edit_slogan_f').addEvent('keyup', function() {
+			$('m_slogan_f').set('text', this.value);
+		});
+		$('m_logotipo_edit_slogan_f').addEvent('blur', function() {
+			$('m_logotipo_edit_slogan').addClass('hidden');
+			if (this.value == '') {
+				$('m_slogan_f').set('text', 'Slogan da Empresa');
+				this.value = 'Slogan da Empresa';
+			}
+		});
+
+		function calc() {
+			var soma = 0;
+			var largura = $('largura').value;
+			var comprimento = $('comprimento').value;
+
+			largura = largura.replace(',', '.');
+			comprimento = comprimento.replace(',', '.');
+
+			if (largura != 0 && comprimento != 0) {
+				var soma = largura * comprimento;
+			}
+
+			return soma;
+		}
+	});
+
+	function altLogo() {
+		var logo = document.getElementById('tapete_logo').checked;
+		if (logo == true) {
+			$('m_logotipo').removeClass('ocultar');
+		} else {
+			$('m_logotipo').addClass('ocultar');
+		}
+	}
+	function altBorda() {
+		var borda = document.getElementById('tapete_borda').checked;
+		if (borda == true) {
+			$('simulador-tapete-borda').removeClass('ocultar');
+		} else {
+			$('simulador-tapete-borda').addClass('ocultar');
+		}
+	}
+
+	function altTipoBorda(item) {
+		if (item.value == 'Vulcanizada') {
+			$('simulador-tapete-borda').removeClass('flex');
+			$('TapeteBordaCor').removeClass('BordaFlex');
+			//var TapeteBordaCor = $('TapeteBordaCor').get('class');
+			//TapeteBordaCor = TapeteBordaCor.replace('BordaFlex ', '');
+			//$('TapeteBordaCor').set('class', TapeteBordaCor);
+		} else {
+			$('simulador-tapete-borda').addClass('flex');
+			$('simulador-tapete-borda-wrap1').set('class', 'AzulRoyal');
+			$('TapeteBordaCor').set('class', 'BordaFlex AzulRoyal');
+		}
+	}
+
+	function setTapeteBorda(color) {
+		$('simulador-tapete-borda-wrap1').setProperty('class', color)
+		$('TapeteBordaCor').setProperty('class', color);
+		$('TapeteBordaNomeDaCor').set('text', color);
+	}
+	function setTapeteFundo(color) {
+		$('simulador-tapete-fundo').setProperty('class', color)
+		$('TapeteFundoCor').setProperty('class', color);
+		$('TapeteFundoNomeDaCor').set('text', color);
+	}
+	function setLogotipoCor(color) {
+		$('m_logotipo_wrap').setProperty('class', color)
+		$('LogotipoCor').setProperty('class', color);
+		$('LogotipoNomeDaCor').set('text', color);
+	}
+
+	function editTextoLogotipo() {
+		$('m_logotipo_edit_logo').removeClass('hidden');
+		$('m_logotipo_edit_logo_f').focus();
+		if ($('m_logotipo_edit_slogan').get('class') != 'hidden') {
+			$('m_logotipo_edit_slogan').addClass('hidden');
+		}
+		//if ($('m_logotipo_edit_logo_f').value == '') {
+		//	$('m_logotipo_edit_logo_f').value = $('m_logotipo_f').get('text');
+		//}
+	}
+	function editTextoSlogan() {
+		$('m_logotipo_edit_slogan').removeClass('hidden');
+		$('m_logotipo_edit_slogan_f').focus();
+		if ($('m_logotipo_edit_logo').get('class') != 'hidden') {
+			$('m_logotipo_edit_logo').addClass('hidden');
+		}
+//		if ($('m_logotipo_edit_slogan_f').value == '') {
+//			$('m_logotipo_edit_slogan_f').value = $('m_slogan_f').get('text');
+//		}
+	}
+</script>
+
+</head>
+<body>
+       
+		    		          
+<div id="rt-main" class="conte">
+                <div class="rt-container">
+                    <div class="rt-grid-12 ">
+                                                						<div class="rt-block">
+	                        <div id="rt-mainbody">
+								<div class="component-content">
+	                            	<div class="item-page">
+
+
+
+
+
+
+
+
+
+<div id="simulador">
+<div id="simulador-container">
+<div id="simulador-col1"><br>
+<div id="simulador-tapete-borda">
+<div id="simulador-tapete-borda-wrap1" class="RosaPink">
+<div id="simulador-tapete-borda-wrap2">
+<div id="simulador-tapete-borda-wrap3">
+<div id="simulador-tapete-borda-wrap4">
+<div id="simulador-tapete-fundo" class="Roxo">
+<div id="m_logotipo">
+<div id="m_logotipo_wrap" class="Branco"><span id="m_logotipo_f" class="m_logotipo" onclick="editTextoLogotipo()">Logotipo</span><br> <span id="m_slogan_f" class="m_slogan" onclick="editTextoSlogan()">Slogan da Empresa<span>&nbsp;</span></span></div>
+<div id="m_logotipo_edit_logo" class="hidden"><input id="m_logotipo_edit_logo_f" type="text" value="Logotipo" name="m_logotipo_edit_logo"></div>
+<div id="m_logotipo_edit_slogan" class="hidden"><input id="m_logotipo_edit_slogan_f" type="text" value="Slogan da Empresa" name="m_logotipo_edit_slogan"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="simulador-col2">
+<div id="simulador-controles">
+<p style="font-size: 18px;">Faça uma prévia aproximada do seu tapete:</p>
+<div style="position: relative; z-index: 3; clear: both;">
+<div id="TapeteBordaSeletor" class="Seletor">
+<div class="CorFundo">
+<div id="TapeteBordaCor" class="RosaPink">&nbsp;</div>
+</div>
+<div id="TapeteBordaSeletorColorWheel" class="ColorWheel"><a title="Selecionar Cor" href="javascript:void(0)">Selecionar Cor</a></div>
+</div>
+<div class="NomeDoItem">Cor da Borda</div>
+<div id="TapeteBordaNomeDaCor" class="NomeDaCor">RosaPink</div>
+<div id="TapeteBordaSeletorList" class="SeletorList"><a class="Amarelo" onclick="setTapeteBorda(&#39;Amarelo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulBebe" onclick="setTapeteBorda(&#39;AzulBebe&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulMarinho" onclick="setTapeteBorda(&#39;AzulMarinho&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulMaritimo" onclick="setTapeteBorda(&#39;AzulMaritimo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulRoyal" onclick="setTapeteBorda(&#39;AzulRoyal&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Bege" onclick="setTapeteBorda(&#39;Bege&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Bordo" onclick="setTapeteBorda(&#39;Bordo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Branco" onclick="setTapeteBorda(&#39;Branco&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Ceramica" onclick="setTapeteBorda(&#39;Ceramica&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Cinza" onclick="setTapeteBorda(&#39;Cinza&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Creme" onclick="setTapeteBorda(&#39;Creme&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Fluorescente" onclick="setTapeteBorda(&#39;Fluorescente&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Grafite" onclick="setTapeteBorda(&#39;Grafite&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Laranja" onclick="setTapeteBorda(&#39;Laranja&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Marrom" onclick="setTapeteBorda(&#39;Marrom&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Ouro" onclick="setTapeteBorda(&#39;Ouro&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Perola" onclick="setTapeteBorda(&#39;Perola&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Prata" onclick="setTapeteBorda(&#39;Prata&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Preto" onclick="setTapeteBorda(&#39;Preto&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="RosaBebe" onclick="setTapeteBorda(&#39;RosaBebe&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="RosaPink" onclick="setTapeteBorda(&#39;RosaPink&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Roxo" onclick="setTapeteBorda(&#39;Roxo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeAgua" onclick="setTapeteBorda(&#39;VerdeAgua&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeBandeira" onclick="setTapeteBorda(&#39;VerdeBandeira&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeFloresta" onclick="setTapeteBorda(&#39;VerdeFloresta&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeLimao" onclick="setTapeteBorda(&#39;VerdeLimao&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeMusgo" onclick="setTapeteBorda(&#39;VerdeMusgo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdePiscina" onclick="setTapeteBorda(&#39;VerdePiscina&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Vermelho" onclick="setTapeteBorda(&#39;Vermelho&#39;)" href="javascript:void(0)">&nbsp;</a></div>
+<div id="TapeteBordaFlexSeletorList" class="SeletorList"><a class="AzulRoyal" onclick="setTapeteBorda(&#39;BordaFlex AzulRoyal&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Grafite" onclick="setTapeteBorda(&#39;BordaFlex Grafite&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Preto" onclick="setTapeteBorda(&#39;BordaFlex Preto&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Marrom" onclick="setTapeteBorda(&#39;BordaFlex Marrom&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeBandeira" onclick="setTapeteBorda(&#39;BordaFlex VerdeBandeira&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Vermelho" onclick="setTapeteBorda(&#39;BordaFlex Vermelho&#39;)" href="javascript:void(0)">&nbsp;</a></div>
+</div>
+<div style="position: relative; z-index: 2; clear: both;">
+<div id="TapeteFundoSeletor" class="Seletor">
+<div class="CorFundo">
+<div id="TapeteFundoCor" class="Roxo">&nbsp;</div>
+</div>
+<div id="TapeteFundoSeletorColorWheel" class="ColorWheel"><a title="Selecionar Cor" href="javascript:void(0)">Selecionar Cor</a></div>
+</div>
+<div class="NomeDoItem">Cor do Fundo</div>
+<div id="TapeteFundoNomeDaCor" class="NomeDaCor">Roxo</div>
+<div id="TapeteFundoSeletorList" class="SeletorList"><a class="Amarelo" onclick="setTapeteFundo(&#39;Amarelo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulBebe" onclick="setTapeteFundo(&#39;AzulBebe&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulMarinho" onclick="setTapeteFundo(&#39;AzulMarinho&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulMaritimo" onclick="setTapeteFundo(&#39;AzulMaritimo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulRoyal" onclick="setTapeteFundo(&#39;AzulRoyal&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Bege" onclick="setTapeteFundo(&#39;Bege&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Bordo" onclick="setTapeteFundo(&#39;Bordo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Branco" onclick="setTapeteFundo(&#39;Branco&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Ceramica" onclick="setTapeteFundo(&#39;Ceramica&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Cinza" onclick="setTapeteFundo(&#39;Cinza&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Creme" onclick="setTapeteFundo(&#39;Creme&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Fluorescente" onclick="setTapeteFundo(&#39;Fluorescente&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Grafite" onclick="setTapeteFundo(&#39;Grafite&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Laranja" onclick="setTapeteFundo(&#39;Laranja&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Marrom" onclick="setTapeteFundo(&#39;Marrom&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Ouro" onclick="setTapeteFundo(&#39;Ouro&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Perola" onclick="setTapeteFundo(&#39;Perola&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Prata" onclick="setTapeteFundo(&#39;Prata&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Preto" onclick="setTapeteFundo(&#39;Preto&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="RosaBebe" onclick="setTapeteFundo(&#39;RosaBebe&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="RosaPink" onclick="setTapeteFundo(&#39;RosaPink&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Roxo" onclick="setTapeteFundo(&#39;Roxo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeAgua" onclick="setTapeteFundo(&#39;VerdeAgua&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeBandeira" onclick="setTapeteFundo(&#39;VerdeBandeira&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeFloresta" onclick="setTapeteFundo(&#39;VerdeFloresta&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeLimao" onclick="setTapeteFundo(&#39;VerdeLimao&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeMusgo" onclick="setTapeteFundo(&#39;VerdeMusgo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdePiscina" onclick="setTapeteFundo(&#39;VerdePiscina&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Vermelho" onclick="setTapeteFundo(&#39;Vermelho&#39;)" href="javascript:void(0)">&nbsp;</a></div>
+</div>
+<div style="position: relative; z-index: 1; clear: both;">
+<div id="LogotipoCorSeletor" class="Seletor">
+<div class="CorFundo">
+<div id="LogotipoCor" class="Branco">&nbsp;</div>
+</div>
+<div id="LogotipoCorSeletorColorWheel" class="ColorWheel"><a title="Selecionar Cor" href="javascript:void(0)">Selecionar Cor</a></div>
+</div>
+<div class="NomeDoItem">Cor do Logotipo</div>
+<div id="LogotipoNomeDaCor" class="NomeDaCor">Branco</div>
+<div id="LogotipoCorSeletorList" class="SeletorList"><a class="Amarelo" onclick="setLogotipoCor(&#39;Amarelo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulBebe" onclick="setLogotipoCor(&#39;AzulBebe&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulMarinho" onclick="setLogotipoCor(&#39;AzulMarinho&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulMaritimo" onclick="setLogotipoCor(&#39;AzulMaritimo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="AzulRoyal" onclick="setLogotipoCor(&#39;AzulRoyal&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Bege" onclick="setLogotipoCor(&#39;Bege&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Bordo" onclick="setLogotipoCor(&#39;Bordo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Branco" onclick="setLogotipoCor(&#39;Branco&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Ceramica" onclick="setLogotipoCor(&#39;Ceramica&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Cinza" onclick="setLogotipoCor(&#39;Cinza&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Creme" onclick="setLogotipoCor(&#39;Creme&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Fluorescente" onclick="setLogotipoCor(&#39;Fluorescente&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Grafite" onclick="setLogotipoCor(&#39;Grafite&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Laranja" onclick="setLogotipoCor(&#39;Laranja&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Marrom" onclick="setLogotipoCor(&#39;Marrom&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Ouro" onclick="setLogotipoCor(&#39;Ouro&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Perola" onclick="setLogotipoCor(&#39;Perola&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Prata" onclick="setLogotipoCor(&#39;Prata&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Preto" onclick="setLogotipoCor(&#39;Preto&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="RosaBebe" onclick="setLogotipoCor(&#39;RosaBebe&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="RosaPink" onclick="setLogotipoCor(&#39;RosaPink&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Roxo" onclick="setLogotipoCor(&#39;Roxo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeAgua" onclick="setLogotipoCor(&#39;VerdeAgua&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeBandeira" onclick="setLogotipoCor(&#39;VerdeBandeira&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeFloresta" onclick="setLogotipoCor(&#39;VerdeFloresta&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeLimao" onclick="setLogotipoCor(&#39;VerdeLimao&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdeMusgo" onclick="setLogotipoCor(&#39;VerdeMusgo&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="VerdePiscina" onclick="setLogotipoCor(&#39;VerdePiscina&#39;)" href="javascript:void(0)">&nbsp;</a> <a class="Vermelho" onclick="setLogotipoCor(&#39;Vermelho&#39;)" href="javascript:void(0)">&nbsp;</a></div>
+</div>
+<br>
+<div style="clear: both;">
+<p style="font-size: 19px; line-height: 20px;"><input id="tapete_logo" onclick="altLogo()" type="checkbox" checked="checked" name="tapete_logo">Tapete com Logotipo</p>
+<p style="font-size: 19px; line-height: 20px;"><input id="tapete_borda" onclick="altBorda()" type="checkbox" checked="checked" name="tapete_borda">Tapete com Borda</p>
+<div><strong>Tipo da Borda:</strong></div>
+<p style="font-size: 19px; line-height: 22px;"><input id="tipo_borda_vulcanizada" onclick="altTipoBorda(this)" type="radio" checked="checked" value="Vulcanizada" name="tipo_borda"><label style="display: inline; font-size: 19px;" for="tipo_borda_vulcanizada">Vulcanizada</label> &nbsp; <input id="tipo_borda_flex" onclick="altTipoBorda(this)" type="radio" value="Flex" name="tipo_borda"><label style="display: inline; font-size: 19px;" for="tipo_borda_flex">Flex</label></p>
+<div class="cl_soma"><small>Largura:</small><br> <input id="largura" type="text" value="0" name="largura">&nbsp;</div>
+<div class="cl_soma"><small>Comprim.:</small><br> <input id="comprimento" type="text" value="0" name="comprimento">&nbsp;</div>
+<div class="cl_soma"><small>&nbsp;</small><br> = <input id="soma" type="text" disabled="disabled" value="0" name="cl_soma"></div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+	
+</div>
+
+								</div>
+	                        </div>
+						</div>
+                                                                    </div>
+                                        <div class="clear"></div>
+                </div>
+            </div>
+		
+		</html>

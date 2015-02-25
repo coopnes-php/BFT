@@ -1,0 +1,399 @@
+
+
+#simulador { overflow: hidden; }
+#simulador-container { overflow: hidden; }
+#simulador-col1 { width: 66%; float: left; }
+#simulador-col2 { width: 34%; float: right; }
+#simulador-controles { display: block; }
+#simulador-tapete-borda,
+#simulador-tapete-borda-wrap1,
+#simulador-tapete-borda-wrap2,
+#simulador-tapete-borda-wrap3,
+#simulador-tapete-borda-wrap4 {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	width: 560px;
+	height: 360px;
+}
+#simulador-tapete-borda {
+	border: 1px solid #eee;
+	box-shadow: 1px 1px 7px -1px #333333;
+}
+#simulador-tapete-fundo {
+	display: block;
+	width: 520px;
+	height: 320px;
+	background: #fff;
+	margin: 20px;
+	box-shadow: 1px 1px 6px -1px #333333 inset;
+}
+#m_logotipo {
+	text-align: center;
+	line-height: 2.4em;
+	height: 100%;
+	width: 100%;
+}
+#m_logotipo_wrap {
+	display: inline-block;
+	margin-top: 22%;
+}
+.m_logotipo {
+	font-size: 72px;
+	font-weight: bold;
+	opacity: .75;
+	text-shadow: 2px 2px 2px #333333;
+}
+.m_slogan {
+	font-size: 32px;
+	opacity: .75;
+	text-shadow: 2px 2px 2px #333333;
+}
+
+#TapeteFundoSeletor {
+	position: relative;
+	width: 64px;
+	height: 64px;
+}
+#TapeteBordaSeletor {
+	position: relative;
+	width: 64px;
+	height: 64px;
+}
+#LogotipoCorSeletor {
+	position: relative;
+	width: 64px;
+	height: 64px;
+}
+#TapeteFundoSeletorList { display: none; }
+#TapeteFundoSeletorList.open { display: block; }
+
+#TapeteBordaSeletorList { display: none; }
+#TapeteBordaSeletorList.open { display: block; }
+
+#TapeteBordaFlexSeletorList { display: none; }
+#TapeteBordaFlexSeletorList.open { display: block; }
+
+#LogotipoCorSeletorList { display: none; }
+#LogotipoCorSeletorList.open { display: block; }
+
+.Seletor {
+	float: left;
+}
+.CorFundo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 54px;
+	height: 54px;
+	background: transparent url(../img/sel-rec.png) 0 0 no-repeat;
+}
+.CorFundo div {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 45px;
+	height: 45px;
+	background-color: #fff;
+}
+.ColorWheel a {
+	text-indent: -9000px;
+	display: block;
+}
+.ColorWheel {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 35px;
+	height: 35px;
+	background: transparent url(../img/sel-circ.png) 0 0 no-repeat;
+}
+.NomeDoItem {
+	padding-top: 15px;
+	margin-left: 66px;
+	font-size: 24px;
+	line-height: 26px;
+	color: #444;
+}
+.NomeDaCor {
+	margin-left: 68px;
+	font-size: 18px;
+	line-height: 20px;
+	color: #999;
+}
+
+.SeletorList {
+	clear: both;
+	width: 264px;
+	border: 1px solid #999;
+	overflow: hidden;
+	position: absolute;
+	top: 61px;
+	left: 3px;
+	background: #f8f8f8;
+	box-shadow: 0px 2px 6px 0px #999;
+}
+.SeletorList a {
+	width: 42px;
+	height: 42px;
+	display: block;
+	float: left;
+	border: 1px solid #fff;
+}
+
+.cl_soma {
+	float: left;
+}
+.cl_soma input {
+	width: 55px;
+}
+
+#simulador-tapete-fundo.Amarelo { background: transparent url(../img/amarelo.jpg); }
+#simulador-tapete-fundo.AzulBebe { background: transparent url(../img/azul-bebe.jpg); }
+#simulador-tapete-fundo.AzulMarinho { background: transparent url(../img/azul-marinho.jpg); }
+#simulador-tapete-fundo.AzulMaritimo { background: transparent url(../img/azul-maritimo.jpg); }
+#simulador-tapete-fundo.AzulRoyal { background: transparent url(../img/azul-royal.jpg); }
+#simulador-tapete-fundo.Bege { background: transparent url(../img/bege.jpg); }
+#simulador-tapete-fundo.Bordo { background: transparent url(../img/bordo.jpg); }
+#simulador-tapete-fundo.Branco { background: transparent url(../img/branco.jpg); }
+#simulador-tapete-fundo.Ceramica { background: transparent url(../img/ceramica.jpg); }
+#simulador-tapete-fundo.Cinza { background: transparent url(../img/cinza.jpg); }
+#simulador-tapete-fundo.Creme { background: transparent url(../img/creme.jpg); }
+#simulador-tapete-fundo.Fluorescente { background: transparent url(../img/fluorescente.jpg); }
+#simulador-tapete-fundo.Grafite { background: transparent url(../img/grafite.jpg); }
+#simulador-tapete-fundo.Laranja { background: transparent url(../img/laranja.jpg); }
+#simulador-tapete-fundo.Marrom { background: transparent url(../img/marron.jpg); }
+#simulador-tapete-fundo.Ouro { background: transparent url(../img/ouro.jpg); }
+#simulador-tapete-fundo.Perola { background: transparent url(../img/perola.jpg); }
+#simulador-tapete-fundo.Prata { background: transparent url(../img/prata.jpg); }
+#simulador-tapete-fundo.Preto { background: transparent url(../img/preto.jpg); }
+#simulador-tapete-fundo.RosaBebe { background: transparent url(../img/rosa-bebe.jpg); }
+#simulador-tapete-fundo.RosaPink { background: transparent url(../img/rosa-pink.jpg); }
+#simulador-tapete-fundo.Roxo { background: transparent url(../img/roxo.jpg); }
+#simulador-tapete-fundo.VerdeAgua { background: transparent url(../img/verde-agua.jpg); }
+#simulador-tapete-fundo.VerdeBandeira { background: transparent url(../img/verde-bandeira.jpg); }
+#simulador-tapete-fundo.VerdeFloresta { background: transparent url(../img/verde-floresta.jpg); }
+#simulador-tapete-fundo.VerdeLimao { background: transparent url(../img/verde-limao.jpg); }
+#simulador-tapete-fundo.VerdeMusgo { background: transparent url(../img/verde-musgo.jpg); }
+#simulador-tapete-fundo.VerdePiscina { background: transparent url(../img/verde-piscina.jpg); }
+#simulador-tapete-fundo.Vermelho { background: transparent url(../img/vermelho.jpg); }
+
+#simulador-tapete-borda-wrap1.Amarelo { background: transparent url(../img/amarelo.jpg); }
+#simulador-tapete-borda-wrap1.AzulBebe { background: transparent url(../img/azul-bebe.jpg); }
+#simulador-tapete-borda-wrap1.AzulMarinho { background: transparent url(../img/azul-marinho.jpg); }
+#simulador-tapete-borda-wrap1.AzulMaritimo { background: transparent url(../img/azul-maritimo.jpg); }
+#simulador-tapete-borda-wrap1.AzulRoyal { background: transparent url(../img/azul-royal.jpg); }
+#simulador-tapete-borda-wrap1.Bege { background: transparent url(../img/bege.jpg); }
+#simulador-tapete-borda-wrap1.Bordo { background: transparent url(../img/bordo.jpg); }
+#simulador-tapete-borda-wrap1.Branco { background: transparent url(../img/branco.jpg); }
+#simulador-tapete-borda-wrap1.Ceramica { background: transparent url(../img/ceramica.jpg); }
+#simulador-tapete-borda-wrap1.Cinza { background: transparent url(../img/cinza.jpg); }
+#simulador-tapete-borda-wrap1.Creme { background: transparent url(../img/creme.jpg); }
+#simulador-tapete-borda-wrap1.Fluorescente { background: transparent url(../img/fluorescente.jpg); }
+#simulador-tapete-borda-wrap1.Grafite { background: transparent url(../img/grafite.jpg); }
+#simulador-tapete-borda-wrap1.Laranja { background: transparent url(../img/laranja.jpg); }
+#simulador-tapete-borda-wrap1.Marrom { background: transparent url(../img/marron.jpg); }
+#simulador-tapete-borda-wrap1.Ouro { background: transparent url(../img/ouro.jpg); }
+#simulador-tapete-borda-wrap1.Perola { background: transparent url(../img/perola.jpg); }
+#simulador-tapete-borda-wrap1.Prata { background: transparent url(../img/prata.jpg); }
+#simulador-tapete-borda-wrap1.Preto { background: transparent url(../img/preto.jpg); }
+#simulador-tapete-borda-wrap1.RosaBebe { background: transparent url(../img/rosa-bebe.jpg); }
+#simulador-tapete-borda-wrap1.RosaPink { background: transparent url(../img/rosa-pink.jpg); }
+#simulador-tapete-borda-wrap1.Roxo { background: transparent url(../img/roxo.jpg); }
+#simulador-tapete-borda-wrap1.VerdeAgua { background: transparent url(../img/verde-agua.jpg); }
+#simulador-tapete-borda-wrap1.VerdeBandeira { background: transparent url(../img/verde-bandeira.jpg); }
+#simulador-tapete-borda-wrap1.VerdeFloresta { background: transparent url(../img/verde-floresta.jpg); }
+#simulador-tapete-borda-wrap1.VerdeLimao { background: transparent url(../img/verde-limao.jpg); }
+#simulador-tapete-borda-wrap1.VerdeMusgo { background: transparent url(../img/verde-musgo.jpg); }
+#simulador-tapete-borda-wrap1.VerdePiscina { background: transparent url(../img/verde-piscina.jpg); }
+#simulador-tapete-borda-wrap1.Vermelho { background: transparent url(../img/vermelho.jpg); }
+
+#m_logotipo_wrap.Amarelo { background: none; color: #eccf25; }
+#m_logotipo_wrap.AzulBebe { background: none; color: #89b9dd; }
+#m_logotipo_wrap.AzulMarinho { background: none; color: #1e2f4e; }
+#m_logotipo_wrap.AzulMaritimo { background: none; color: #3d74c4; }
+#m_logotipo_wrap.AzulRoyal { background: none; color: #283f85; }
+#m_logotipo_wrap.Bege { background: none; color: #7c6e47; }
+#m_logotipo_wrap.Bordo { background: none; color: #68292d; }
+#m_logotipo_wrap.Branco { background: none; color: #ffffff; }
+#m_logotipo_wrap.Ceramica { background: none; color: #a5503a; }
+#m_logotipo_wrap.Cinza { background: none; color: #6c6c6c; }
+#m_logotipo_wrap.Creme { background: none; color: #caa970; }
+#m_logotipo_wrap.Fluorescente { background: none; color: #e2f798; }
+#m_logotipo_wrap.Grafite { background: none; color: #333333; }
+#m_logotipo_wrap.Laranja { background: none; color: #d55520; }
+#m_logotipo_wrap.Marrom { background: none; color: #34251d; }
+#m_logotipo_wrap.Ouro { background: none; color: #a17325; }
+#m_logotipo_wrap.Perola { background: none; color: #f5f3e2; }
+#m_logotipo_wrap.Prata { background: none; color: #c3c3c1; }
+#m_logotipo_wrap.Preto { background: none; color: #111111; }
+#m_logotipo_wrap.RosaBebe { background: none; color: #eaaccf; }
+#m_logotipo_wrap.RosaPink { background: none; color: #da3976; }
+#m_logotipo_wrap.Roxo { background: none; color: #60296c; }
+#m_logotipo_wrap.VerdeAgua { background: none; color: #8dcfc4; }
+#m_logotipo_wrap.VerdeBandeira { background: none; color: #0c7523; }
+#m_logotipo_wrap.VerdeFloresta { background: none; color: #1d3435; }
+#m_logotipo_wrap.VerdeLimao { background: none; color: #c6da15; }
+#m_logotipo_wrap.VerdeMusgo { background: none; color: #2c4020; }
+#m_logotipo_wrap.VerdePiscina { background: none; color: #13aa8d; }
+#m_logotipo_wrap.Vermelho { background: none; color: #c11516; }
+
+.Amarelo { background: transparent url(../img/min/amarelo.jpg); }
+.AzulBebe { background: transparent url(../img/min/azul-bebe.jpg); }
+.AzulMarinho { background: transparent url(../img/min/azul-marinho.jpg); }
+.AzulMaritimo { background: transparent url(../img/min/azul-maritimo.jpg); }
+.AzulRoyal { background: transparent url(../img/min/azul-royal.jpg); }
+.Bege { background: transparent url(../img/min/bege.jpg); }
+.Bordo { background: transparent url(../img/min/bordo.jpg); }
+.Branco { background: transparent url(../img/min/branco.jpg); }
+.Ceramica { background: transparent url(../img/min/ceramica.jpg); }
+.Cinza { background: transparent url(../img/min/cinza.jpg); }
+.Creme { background: transparent url(../img/min/creme.jpg); }
+.Fluorescente { background: transparent url(../img/min/fluorescente.jpg); }
+.Grafite { background: transparent url(../img/min/grafite.jpg); }
+.Laranja { background: transparent url(../img/min/laranja.jpg); }
+.Marrom { background: transparent url(../img/min/marron.jpg); }
+.Ouro { background: transparent url(../img/min/ouro.jpg); }
+.Perola { background: transparent url(../img/min/perola.jpg); }
+.Prata { background: transparent url(../img/min/prata.jpg); }
+.Preto { background: transparent url(../img/min/preto.jpg); }
+.RosaBebe { background: transparent url(../img/min/rosa-bebe.jpg); }
+.RosaPink { background: transparent url(../img/min/rosa-pink.jpg); }
+.Roxo { background: transparent url(../img/min/roxo.jpg); }
+.VerdeAgua { background: transparent url(../img/min/verde-agua.jpg); }
+.VerdeBandeira { background: transparent url(../img/min/verde-bandeira.jpg); }
+.VerdeFloresta { background: transparent url(../img/min/verde-floresta.jpg); }
+.VerdeLimao { background: transparent url(../img/min/verde-limao.jpg); }
+.VerdeMusgo { background: transparent url(../img/min/verde-musgo.jpg); }
+.VerdePiscina { background: transparent url(../img/min/verde-piscina.jpg); }
+.Vermelho { background: transparent url(../img/min/vermelho.jpg); }
+
+#TapeteBordaFlexSeletorList .AzulRoyal  { background: transparent url(../img/borda-flex-thumb-azulroyal.png); }
+#TapeteBordaFlexSeletorList .Grafite  { background: transparent url(../img/borda-flex-thumb-grafite.png); }
+#TapeteBordaFlexSeletorList .Preto  { background: transparent url(../img/borda-flex-thumb-preto.png); }
+#TapeteBordaFlexSeletorList .Marrom  { background: transparent url(../img/borda-flex-thumb-marrom.png); }
+#TapeteBordaFlexSeletorList .VerdeBandeira  { background: transparent url(../img/borda-flex-thumb-verdebandeira.png); }
+#TapeteBordaFlexSeletorList .Vermelho  { background: transparent url(../img/borda-flex-thumb-vermelho.png); }
+
+#TapeteBordaCor.BordaFlex.AzulRoyal  { background: transparent url(../img/borda-flex-thumb-azulroyal.png); }
+#TapeteBordaCor.BordaFlex.Grafite  { background: transparent url(../img/borda-flex-thumb-grafite.png); }
+#TapeteBordaCor.BordaFlex.Preto  { background: transparent url(../img/borda-flex-thumb-preto.png); }
+#TapeteBordaCor.BordaFlex.Marrom  { background: transparent url(../img/borda-flex-thumb-marrom.png); }
+#TapeteBordaCor.BordaFlex.VerdeBandeira  { background: transparent url(../img/borda-flex-thumb-verdebandeira.png); }
+#TapeteBordaCor.BordaFlex.Vermelho  { background: transparent url(../img/borda-flex-thumb-vermelho.png); }
+
+#m_logotipo.ocultar { visibility: hidden; }
+#simulador-tapete-borda.ocultar {
+	background: none;
+	box-shadow: none;
+	border: 1px solid #fff;
+}
+
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1 {
+	background: transparent url(../img/borda-flex-h.png) top left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap2 {
+	background: transparent url(../img/borda-flex-v.png) bottom left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap3 {
+	background: transparent url(../img/borda-flex-v.png) top right no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap4 {
+	background: transparent url(../img/borda-flex-h.png) bottom right no-repeat;
+}
+/* Flex - Grafite */
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Grafite {
+	background: transparent url(../img/borda-flex-h-grafite.png) top left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Grafite #simulador-tapete-borda-wrap2 {
+	background: transparent url(../img/borda-flex-v-grafite.png) bottom left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Grafite #simulador-tapete-borda-wrap3 {
+	background: transparent url(../img/borda-flex-v-grafite.png) top right no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Grafite #simulador-tapete-borda-wrap4 {
+	background: transparent url(../img/borda-flex-h-grafite.png) bottom right no-repeat;
+}
+/* Flex - Preto */
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Preto {
+	background: transparent url(../img/borda-flex-h-preto.png) top left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Preto #simulador-tapete-borda-wrap2 {
+	background: transparent url(../img/borda-flex-v-preto.png) bottom left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Preto #simulador-tapete-borda-wrap3 {
+	background: transparent url(../img/borda-flex-v-preto.png) top right no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Preto #simulador-tapete-borda-wrap4 {
+	background: transparent url(../img/borda-flex-h-preto.png) bottom right no-repeat;
+}
+/* Flex - Marrom */
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Marrom {
+	background: transparent url(../img/borda-flex-h-marrom.png) top left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Marrom #simulador-tapete-borda-wrap2 {
+	background: transparent url(../img/borda-flex-v-marrom.png) bottom left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Marrom #simulador-tapete-borda-wrap3 {
+	background: transparent url(../img/borda-flex-v-marrom.png) top right no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Marrom #simulador-tapete-borda-wrap4 {
+	background: transparent url(../img/borda-flex-h-marrom.png) bottom right no-repeat;
+}
+/* Flex - AzulRoyal */
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.AzulRoyal {
+	background: transparent url(../img/borda-flex-h-azulroyal.png) top left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.AzulRoyal #simulador-tapete-borda-wrap2 {
+	background: transparent url(../img/borda-flex-v-azulroyal.png) bottom left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.AzulRoyal #simulador-tapete-borda-wrap3 {
+	background: transparent url(../img/borda-flex-v-azulroyal.png) top right no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.AzulRoyal #simulador-tapete-borda-wrap4 {
+	background: transparent url(../img/borda-flex-h-azulroyal.png) bottom right no-repeat;
+}
+/* Flex - VerdeBandeira */
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.VerdeBandeira {
+	background: transparent url(../img/borda-flex-h-verdebandeira.png) top left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.VerdeBandeira #simulador-tapete-borda-wrap2 {
+	background: transparent url(../img/borda-flex-v-verdebandeira.png) bottom left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.VerdeBandeira #simulador-tapete-borda-wrap3 {
+	background: transparent url(../img/borda-flex-v-verdebandeira.png) top right no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.VerdeBandeira #simulador-tapete-borda-wrap4 {
+	background: transparent url(../img/borda-flex-h-verdebandeira.png) bottom right no-repeat;
+}
+/* Flex - Vermelho */
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Vermelho {
+	background: transparent url(../img/borda-flex-h-vermelho.png) top left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Vermelho #simulador-tapete-borda-wrap2 {
+	background: transparent url(../img/borda-flex-v-vermelho.png) bottom left no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Vermelho #simulador-tapete-borda-wrap3 {
+	background: transparent url(../img/borda-flex-v-vermelho.png) top right no-repeat;
+}
+#simulador-tapete-borda.flex #simulador-tapete-borda-wrap1.Vermelho #simulador-tapete-borda-wrap4 {
+	background: transparent url(../img/borda-flex-h-vermelho.png) bottom right no-repeat;
+}
+
+.menu-clientes .phocagallery-box-file {
+	border: 1px solid #f0f0f0;
+}
+.menu-clientes .phocagallery-box-file:hover {
+	border: 1px solid #f8f8f8;
+}
+.menu-clientes #phocagallery .pg-name {
+	color: #444;
+}
+
+
+#simulador-tapete-borda.ocultar #simulador-tapete-borda-wrap1,
+#simulador-tapete-borda.ocultar #simulador-tapete-borda-wrap2,
+#simulador-tapete-borda.ocultar #simulador-tapete-borda-wrap3,
+#simulador-tapete-borda.ocultar #simulador-tapete-borda-wrap4 {
+	background: none;
+}
