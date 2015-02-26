@@ -219,7 +219,7 @@ include 'topo.php';
 <!-- ==========================
     LATEST WORK - START 
 =========================== -->
-<section class="content bg-color-2" id="section-portfolio">
+<!--<section class="content bg-color-2" id="section-portfolio">
     <div class="container">
         <h2>Check our Latest work</h2>
         <div class="row">
@@ -266,7 +266,7 @@ include 'topo.php';
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- ==========================
     LATEST WORK - END 
 =========================== -->

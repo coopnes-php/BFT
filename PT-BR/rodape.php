@@ -26,30 +26,30 @@
             </div>
 
             <div class="col-md-6 hidden-xs hidden-sm">
-                <h3><i class="fa fa-camera"></i>Últimos trabalhos</h3>
+                <h3><i class="fa fa-camera"></i>Alguns trabalhos</h3>
                 <div class="row" id="latest-work-footer">
                     <div class="overlay-wrapper col-sm-6">
-                        <img src="<?php echo $inc ?>image/image_01.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/10.jpg" class="img-responsive" alt="">
                         <span class="overlay">
-                            <a href=""><i class="fa fa-plus"></i></a>
+                            <a href="<?php echo $inc ?>portfolio.php"><i class="fa fa-plus"></i></a>
                         </span>
                     </div>
                     <div class="overlay-wrapper col-sm-6">
-                        <img src="<?php echo $inc ?>image/image_02.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/14.jpg" class="img-responsive" alt="">
                         <span class="overlay">
-                            <a href=""><i class="fa fa-plus"></i></a>
+                            <a href="<?php echo $inc ?>portfolio.php"><i class="fa fa-plus"></i></a>
                         </span>
                     </div>
                     <div class="overlay-wrapper col-sm-6">
-                        <img src="<?php echo $inc ?>image/image_05.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/18.jpg" class="img-responsive" alt="">
                         <span class="overlay">
-                            <a href=""><i class="fa fa-plus"></i></a>
+                            <a href="<?php echo $inc ?>portfolio.php"><i class="fa fa-plus"></i></a>
                         </span>
                     </div>
                     <div class="overlay-wrapper col-sm-6">
-                        <img src="<?php echo $inc ?>image/image_06.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/21.jpg" class="img-responsive" alt="">
                         <span class="overlay">
-                            <a href=""><i class="fa fa-plus"></i></a>
+                            <a href="<?php echo $inc ?>portfolio.php"><i class="fa fa-plus"></i></a>
                         </span>
                     </div>                        
                 </div>
