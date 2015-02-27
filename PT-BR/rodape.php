@@ -100,7 +100,7 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 <script src="<?php echo $inc ?>js/mapa.js"></script>   
-<!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="<?php echo $inc ?>js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="<?php echo $inc ?>js/relogio.js"></script>
 <script src="<?php echo $inc ?>js/bootstrap.min.js"></script>

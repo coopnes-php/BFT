@@ -1,6 +1,6 @@
 <?php
-$inc = "";
-include 'topo.php';
+$inc = "../";
+include '../topo.php';
 ?>
 
 <!-- ==========================
@@ -11,10 +11,10 @@ include 'topo.php';
         <div class="isotope-filter portfolio-filter">
             <ul class="list-unstyled list-inline">
                 <li><a href="#" class="btn btn-lg btn-primary active" data-filter="*">All</a></li>
-                <li><a href="#" class="btn btn-lg btn-primary" data-filter=".design">Design</a></li>
-                <li><a href="#" class="btn btn-lg btn-primary" data-filter=".photography">Photography</a></li>
-                <li><a href="#" class="btn btn-lg btn-primary" data-filter=".icons">Icons</a></li>
-                <li><a href="#" class="btn btn-lg btn-primary" data-filter=".video">Video</a></li>
+                <li><a href="#" class="btn btn-lg btn-primary" data-filter=".design">design</a></li>
+                <li><a href="#" class="btn btn-lg btn-primary" data-filter=".photography">photography</a></li>
+                <li><a href="#" class="btn btn-lg btn-primary" data-filter=".icons">icons</a></li>
+                <li><a href="#" class="btn btn-lg btn-primary" data-filter=".video">video</a></li>
             </ul>
         </div>
         <div class="row portfolio-wrapper">
@@ -23,7 +23,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item design icons">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/1.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/1.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -39,7 +39,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item photography">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/2.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/2.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -69,7 +69,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item photography">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/3.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/3.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -99,7 +99,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item photography">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/4.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/4.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -115,7 +115,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item design icons">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/5.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/5.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -131,7 +131,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item photography">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/6.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/6.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -147,7 +147,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item photography">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/7.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/7.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -163,7 +163,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item design">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/8.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/8.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -179,7 +179,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item photography icons">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/9.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/9.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -195,7 +195,7 @@ include 'topo.php';
             <div class="col-md-3 portfolio-item icons">
                 <article>
                     <div class="overlay-wrapper">
-                        <img src="image/portfolio/10.jpg" class="img-responsive" alt="">
+                        <img src="<?php echo $inc ?>image/portfolio/10.jpg" class="img-responsive" alt="">
                         <span class="overlay">
                             <a href=""><i class="fa fa-plus"></i></a>
                         </span>
@@ -214,8 +214,5 @@ include 'topo.php';
 <!-- ==========================
     PORTFOLIO - END 
 =========================== --> 
-
-
-
-
-<?php include 'rodape.php'; ?>
+ 
+<?php include '../rodape.php'; ?>

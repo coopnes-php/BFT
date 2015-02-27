@@ -142,8 +142,8 @@
                                 <a href="<?php echo $inc ?>index.php" > <i class=""></i>Inicio</a>
                             </li>
 <!--                            <li><a href="#"><i class=""></i> Empresa</a></li>;;
-                            <li><a href="#"><i class=""></i> Produtos</a></li>
-                            <li><a href="#"><i class=""></i> Portifólio</a></li>-->
+                            <li><a href="#"><i class=""></i> Produtos</a></li>-->
+                            <li><a href="<?php echo $inc ?>pages/portfolio.php"><i class=""></i> Portifólio</a></li>
                             <li><a href="<?php echo $inc ?>pages/simulador.php"><i class=""></i> Simulador</a></li>
                             <li><a href="<?php echo $inc ?>pages/contato.php"><i class=""></i> Contato</a></li>      
                         </ul>
