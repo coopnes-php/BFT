@@ -31,25 +31,25 @@
                     <div class="overlay-wrapper col-sm-6">
                         <img src="<?php echo $inc ?>image/portfolio/10.jpg" class="img-responsive" alt="">
                         <span class="overlay">
-                            <a href="<?php echo $inc ?>portfolio.php"><i class="fa fa-plus"></i></a>
+                            <a href="<?php echo $inc ?>pages/portfolio.php"><i class="fa fa-plus"></i></a>
                         </span>
                     </div>
                     <div class="overlay-wrapper col-sm-6">
                         <img src="<?php echo $inc ?>image/portfolio/14.jpg" class="img-responsive" alt="">
                         <span class="overlay">
-                            <a href="<?php echo $inc ?>portfolio.php"><i class="fa fa-plus"></i></a>
+                            <a href="<?php echo $inc ?>pages/portfolio.php"><i class="fa fa-plus"></i></a>
                         </span>
                     </div>
                     <div class="overlay-wrapper col-sm-6">
                         <img src="<?php echo $inc ?>image/portfolio/18.jpg" class="img-responsive" alt="">
                         <span class="overlay">
-                            <a href="<?php echo $inc ?>portfolio.php"><i class="fa fa-plus"></i></a>
+                            <a href="<?php echo $inc ?>pages/portfolio.php"><i class="fa fa-plus"></i></a>
                         </span>
                     </div>
                     <div class="overlay-wrapper col-sm-6">
                         <img src="<?php echo $inc ?>image/portfolio/21.jpg" class="img-responsive" alt="">
                         <span class="overlay">
-                            <a href="<?php echo $inc ?>portfolio.php"><i class="fa fa-plus"></i></a>
+                            <a href="<?php echo $inc ?>pages/portfolio.php"><i class="fa fa-plus"></i></a>
                         </span>
                     </div>                        
                 </div>
@@ -80,8 +80,8 @@
                     <a href="<?php echo $inc ?>index.php" > <i class=""></i>Inicio</a>
                 </li>
 <!--                <li><a href="#"><i class=""></i> Empresa</a></li>
-                <li><a href="#"><i class=""></i> Produtos</a></li>
-                <li><a href="#"><i class=""></i> Portifólio</a></li>-->
+                <li><a href="#"><i class=""></i> Produtos</a></li>-->
+                <li><a href="<?php echo $inc ?>pages/portfolio.php"><i class=""></i> Portifólio</a></li>
                 <li><a href="<?php echo $inc ?>pages/simulador.php"><i class=""></i> Simulador</a></li>
                 <li><a href="<?php echo $inc ?>pages/contato.php"><i class=""></i> Contato</a></li>      
             </ul>
